@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Oppgave 5 - Sang</title>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./menu.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav id="menu"></nav>
+
+        </header>
+        
+        <main>
+            <h1>Oppgave 5 - Sang</h1>
+
+            <p>Trykk på siden for å høre starten på Lisa gikk til skolen.</p>
+
+            
+        </main>
+
+        <footer>
+            <p>Catharina Sørum - Frontend utvikling 2019 - Tema 2</p>
+        </footer>
+        <script src="./menu.js"></script>
+
+        <script>
+            function spillTone(start, varighet, frekvens) {
+                const ac = new AudioContext();
+                const osc = ac.createOscillator();
+                osc.connect(ac.destination);
+                
+                osc.frequency.value = frekvens;
+                osc.start(start);
+                osc.stop(start + varighet);
+            }
+
+            const toner = [
+                {start: 0, varighet: 0.5, frekvens: 261.63},
+                {start: 0.5, varighet: 0.5, frekvens: 293.66},
+                {start: 1, varighet: 0.5, frekvens: 329.63},
+                {start: 1.5, varighet: 0.5, frekvens: 349.23},
+                {start: 2, varighet: 0.8, frekvens: 392.00},
+                {start: 2.9, varighet: 0.8, frekvens: 392.00},
+                {start: 3.7, varighet: 0.3, frekvens: 440.00},
+                {start: 4.1, varighet: 0.3, frekvens: 440.00},
+                {start: 4.5, varighet: 0.3, frekvens: 440.00},
+                {start: 4.9, varighet: 0.3, frekvens: 440.00},
+                {start: 5.3, varighet: 1, frekvens: 392.00},
+            ];
+
+            function spillSang() {
+                for(const tone of toner) {
+                    spillTone(tone.start, tone.varighet, tone.frekvens);
+                }
+            }
+
+            document.onclick = spillSang;
+
+        </script>
+    </body>
+</html>
