@@ -7,9 +7,45 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/* Oppgave 1 */
+main {
+    padding: 2rem;
+}
+
+h1 {
+    color: rgb(42, 124, 143);
+}
+
+footer {
+    display: grid;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(42, 124, 143);
+    width: 100%;
+    color: white;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Index */
+#oppgavesett {
+    width:100%;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
 /* Oppgave 2 */
-/* Oppgave 3 */
+#inpBlomst {
+    padding: 0.5rem;
+    border: 0.1rem solid rgb(42, 124, 143);
+    width: 30%;
+    outline: none;
+}
+
 /* Oppgave 4 */
 #oppgave04 {
     min-height: 500px;
@@ -21,5 +57,3 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
-/* Oppgave 5 */
