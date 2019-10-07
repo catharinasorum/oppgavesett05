@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Oppgave 2 - Blomster</title>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./menu.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav id="menu"></nav>
+
+        </header>
+        
+        <main>
+            <h1>Oppgave 2 - Blomster</h1>
+            <form id="skjema01">
+                <input type="text" id="inpBlomst" placeholder="Skriv inn en blomst" required autocomplete="off">
+            </form>
+
+            <section id="blomsteliste"></section>
+
+        </main>
+
+        <footer>
+            <p>Catharina Sørum - Frontend utvikling 2019 - Tema 2</p>
+        </footer>
+        <script src="./menu.js"></script>
+        <script>
+
+            const blomster = [];
+
+            const skjema01 = document.querySelector("#skjema01");
+            const inpBlomst = document.querySelector("#inpBlomst");
+            const blomsteliste = document.querySelector("#blomsteliste");
+
+            function visBlomster() {
+                blomsteliste.innerHTML = "";
+                for(const blomst of blomster) {
+                    blomsteliste.innerHTML += `
+                    <div>${blomst}</div>
+                    `;
+                }
+            }
+
+            function leggTilBlomst(evt) {
+                evt.preventDefault();
+                blomster.unshift(inpBlomst.value);
+                visBlomster();
+                skjema01.reset();
+            }
+
+            window.addEventListener("submit", leggTilBlomst);
+
+        </script>
+    </body>
+</html>
