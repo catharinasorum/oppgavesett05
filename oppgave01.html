@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Oppgavesett 5 - Array</title>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./menu.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav id="menu"></nav>
+
+        </header>
+        
+        <main>
+            <h1>Oppgave 1 - Fisker</h1>
+
+        </main>
+
+        <footer>
+            <p>Catharina Sørum - Frontend utvikling 2019 - Tema 2</p>
+        </footer>
+        <script src="./menu.js"></script>
+        <script>
+        
+        const fisker = ["Kampfisk", "Neontetra", "Cicklider", "Guppy", "Platy", "Gullbarbe", "Honninggurami"]
+        
+        /* A */
+        console.log(fisker);
+
+        /* B */
+        fisker.unshift("Molly", "Sverddrager"); // Starten av array
+        fisker.push("Kardinaltetra", "Malle"); // Slutten av array
+
+        /* C */
+       
+        fisker.pop(); // Fjerne siste fisken
+
+        /* D */
+        fisker.shift(); // Fjerne første fisken
+
+        /* E */
+        fisker.splice(3, 2);  // Fjerne fisk nr 4 og 5
+
+        </script>
+    </body>
+</html>
