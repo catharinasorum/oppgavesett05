@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="./index.css">
         <link rel="stylesheet" href="./menu.css">
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+        <style>
+            main {
+                background-color: blue;
+                width: 300px;
+                height: 300px;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -22,7 +29,7 @@
         </main>
 
         <footer>
-            <p>Catharina Sørum - Frontend utvikling 2019 - Tema 2</p>
+            <p>Catharina Sørum - Frontend utvikling 2019 - Fagskolen Kristiania</p>
         </footer>
         <script src="./menu.js"></script>
 
@@ -38,8 +45,7 @@
                 }
 
                 const tall = tallene[i];
-                oppgave04.style.width = `${tall}` + "px";
-
+                oppgave04.style.width = `${tall}rem`;
                 i++;
             }
 
